@@ -1,7 +1,7 @@
 package xyz.devleen.myfirstapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -117,10 +117,70 @@ class MainActivity : AppCompatActivity() {
      private fun validacionCedula(){
 
          var id = arrayOf (1,1,5,0,2,4,1,8,2,4)
+         var coe = arrayOf(2,1,2,1,2,1,2,1,2,1)
+         var total = 0
+         var total2 = 0
+         var tot = 0
+         var tot2 = 0
+         var tot3 = 0
+         var total3 = 0
+         var dec1 = 0
+         var dec2 = 0
+         var dec3 = 0
+         var dec4 = 0
+         var dec5 = 0
+         var dec6 = 0
+         var comp = 0
+         val comp2 = 0
+         val res = IntArray(10)
 
 
+         for (i in 0 until id.size ) {
+             total = coe[i] * id.get(i)
+             res [i] = total
+             println("resultado es: $total")
+         }
 
+         for (i in 0..9) {
+             res[i] = total
+             res[i] = coe[i] * id.get(i) + id.get(9) * 0
+             total2 += res[i]
+             total3 = total2 - id.get(9)
+         }
 
+         for (i in 0..9) {
+             if (res[i] >= 10) {
+                 tot2 = tot2 + 1
+                 tot3 = tot2 * 9
+                 tot = total3 - tot3
+             }
+         }
+         println("el total es: $tot")
+
+         dec1 = tot / 10
+         dec2 = dec1 + 1
+         dec3 = dec2 * 10
+         comp = dec3 - tot
+         println("la resta es: $comp")
+
+         if (comp === id.get(9) || id.get(9) === 0) {
+             println("su numero de ceudla es correcta")
+         } else {
+             println("Su numero de cedula no es correcto  favor escribalo de nuevo")
+         }
+
+         if (total >= 10) {
+             println(+total3)
+             dec4 = total3 / 10
+             dec5 = dec4 + 1
+             dec6 = dec5 * 10
+             comp = dec6 - total3
+             if (comp === id.get(9)) {
+                 println("su numero de ceudla es correcta")
+             } else {
+                 println("Su numero de cedula no es correcto  favor escribalo de nuevo")
+             }
+         }
 
 
      }

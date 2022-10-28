@@ -1,9 +1,9 @@
 package xyz.devleen.myfirstapp
 
 class vehiculos (var marca: String,
-                 val Traccion: Array<Traccion>,
-                 val Motor: Array<Motor>,
-                 val Tipo: Array<Tipo>,
+                 val traccion: Array<Traccion>,
+                 val motor: Array<Motor>,
+                 val tipo: Array<Tipo>,
                  var capacidad: String,
                  var color: String ) {
     enum class Traccion{
@@ -27,6 +27,7 @@ class vehiculos (var marca: String,
         println("Marca: "+ marca)
         println("Capacidad: "+ capacidad)
         println("Color: "+ color)
+
         for (i in traccion){
             println("Traccion: " + i)
 
