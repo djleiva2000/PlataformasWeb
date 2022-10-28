@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         edad()
         tablaMult()
         listProyectos()
+        vehiculo()
 
 
     }
@@ -150,13 +151,66 @@ class MainActivity : AppCompatActivity() {
         for (i in 1..9){
             println(num*i)
         }
+        println("-----------------------------")
         for (i in 9 downTo 0){
+            println(num*i)
         }
     }
 //
 // Mostrar el listado de paralelo de la materia de Plataformas móviles y los subgrupos por proyectos (Mostrar los resultados ordenados).
 //
     fun listProyectos(){
+
+        var myMap: Map<String,String> = mapOf()
+
+    myMap= mutableMapOf("Diego" to "Funerraria de perros",
+        "Mateo" to "Funerraria de perros",
+        "erick" to "Funerraria de perros",
+        "Pablo" to "Gestor de clima",
+        "Alejandro" to "Gestor de clima",
+        "Carlos" to "Gestor de clima",
+        "Antonio" to "gestor de clima",
+        "Steven" to "Funerraria de perros",
+        "Miguel" to "Funerraria de perros"
+
+
+        )
+    println("Lista de paralelo")
+    for (i in myMap.toSortedMap()){
+            println(i.key )
+
+    }
+    print("-------- Funeraria de perros --------")
+
+    for (i in myMap.toSortedMap()){
+        if (i.value == "Funerraria de perros"){
+            println(i.key )
+        }
+    }
+
+    print("-------- Gestor de clima --------")
+    for (i in myMap.toSortedMap()){
+        if (i.value == "gestor de clima"){
+            println(i.key )
+        }
+    }
+
+
+
+    }
+//
+//    Presentar las propiedades de un vehículo utilizando clases, como tracción, motor, tipo de vehículo, capacidad
+//
+    private fun vehiculo(){
+        val carro = vehiculos (marca = "Toyota",
+            arrayOf(vehiculos.Traccion.automatica, vehiculos.Traccion.manual),
+            arrayOf(vehiculos.Motor.V1, vehiculos.Motor.V2 ),
+            arrayOf(vehiculos.Tipo.camioneta, vehiculos.Tipo.sedan),
+            capacidad = "4 personas", color = "rojo")
+        println(carro.marca)
+        carro.vehiculo()
+
+
 
     }
 
