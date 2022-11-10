@@ -1,22 +1,45 @@
 package xyz.devleen.myfirstapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button2V2.setOnClickListener{
+
+            val saltar:=Intent(this, ventana2::class.java)
+            startActivity(saltar)
+
+        }
+
+
+
+
+
+
+
+
+
+        btniV2.setOnClickListener{
+            val saltar:Intent= Intent(this, Ventana2::class.java)
+            startActivity(saltar)
+        }
+
         //variableConstante()
         //tipoDatos()
         //array()
         //maps()
-        iva12()
-        validacionCedula()
-        edad()
-        tablaMult()
-        listProyectos()
-        vehiculo()
+        //iva12()
+        //validacionCedula()
+        //edad()
+        //tablaMult()
+        //listProyectos()
+        //vehiculo()
 
 
     }
@@ -113,8 +136,8 @@ class MainActivity : AppCompatActivity() {
 //
 //  Validacion Cedula de identidad
 //
-
      private fun validacionCedula(){
+    println("----------------------------------------------------------")
 
          var id = arrayOf (1,1,5,0,2,4,1,8,2,4)
          var coe = arrayOf(2,1,2,1,2,1,2,1,2,1)
@@ -191,6 +214,8 @@ class MainActivity : AppCompatActivity() {
 //
 
     fun edad (){
+        print("----------------------------------------------------------")
+
         var edadPersona = 22
         if (edadPersona >= 18){
             println("Su edad es: " + edadPersona + ", Es mayor de edad")
@@ -207,11 +232,14 @@ class MainActivity : AppCompatActivity() {
 //
 
     fun tablaMult (){
+        print("----------------------------------------------------------")
+
         var num = 5
         for (i in 1..9){
             println(num*i)
         }
         println("-----------------------------")
+
         for (i in 9 downTo 0){
             println(num*i)
         }
@@ -220,8 +248,10 @@ class MainActivity : AppCompatActivity() {
 // Mostrar el listado de paralelo de la materia de Plataformas móviles y los subgrupos por proyectos (Mostrar los resultados ordenados).
 //
     fun listProyectos(){
+    print("----------------------------------------------------------")
 
-        var myMap: Map<String,String> = mapOf()
+
+    var myMap: Map<String,String> = mapOf()
 
     myMap= mutableMapOf("Diego" to "Funerraria de perros",
         "Mateo" to "Funerraria de perros",
@@ -262,7 +292,9 @@ class MainActivity : AppCompatActivity() {
 //    Presentar las propiedades de un vehículo utilizando clases, como tracción, motor, tipo de vehículo, capacidad
 //
     private fun vehiculo(){
-        val carro = vehiculos (marca = "Toyota",
+    println("----------------------------------------------------------")
+
+    val carro = vehiculos (marca = "Toyota",
             arrayOf(vehiculos.Traccion.automatica, vehiculos.Traccion.manual),
             arrayOf(vehiculos.Motor.V1, vehiculos.Motor.V2 ),
             arrayOf(vehiculos.Tipo.camioneta, vehiculos.Tipo.sedan),
