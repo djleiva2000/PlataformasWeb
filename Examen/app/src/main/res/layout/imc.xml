@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView6"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="5dp"
+        android:layout_width="415dp"
+        android:layout_height="51dp"
+        android:background="#247ECE"
+        android:backgroundTint="#247ECE"
+        android:text=" PETS- IMC"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</android.support.constraint.ConstraintLayout>
